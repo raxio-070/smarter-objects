@@ -1,0 +1,5 @@
+1. Get tagged template literal.
+2. Run through lexer.
+3. Run through parser.
+4. Run through interpreter to create SmarterObject interface.
+5. Create proxies to handle functions such as "$onchange".
