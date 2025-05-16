@@ -2,7 +2,7 @@ import { SmarterObject } from './smarter-object';
 
 export function sobj(obj: string): SmarterObject {
   const code = obj[0];
-  const finalSobj: SmarterObject = {};
+  const finalSobj: SmarterObject = { keys: new Map<string, any>() };
   return finalSobj;
 }
 
