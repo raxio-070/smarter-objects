@@ -1,16 +1,6 @@
-import { SmarterObject } from './smarter-object';
+import { interpretSObj } from "./sobj-interpreter";
 
-export function sobj(obj: string): SmarterObject {
+export function sobj(obj: TemplateStringsArray): any {
   const code = obj[0];
-  const finalSobj: SmarterObject = { keys: new Map<string, any>() };
-  return finalSobj;
+  return interpretSObj(code);
 }
-
-/* syntax:
-import { sobj } from 'smarter-objects';
-const myObj = sobj`{
-  name: "John",
-  age: 30,
-  city: "New York"
-}`;
-*/
